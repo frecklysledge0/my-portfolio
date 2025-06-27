@@ -19,9 +19,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(-45deg, #0a0a0a, #15151a, #20202a, #15151a);
   background-size: 400% 400%;
