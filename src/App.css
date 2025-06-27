@@ -1,0 +1,404 @@
+/* General styles for the main app container */
+.App {
+  position: relative;
+  width: 90%;
+  max-width: 1200px; /* Adjusted for a wider portfolio layout */
+  margin: 0 auto; /* Center the app */
+  padding: 2rem 3rem;
+  background: rgba(30, 30, 40, 0.20); /* Increased transparency */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px); /* Liquid effect blur */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.16); /* Subtle border */
+  color: white;
+  overflow: hidden; /* Hide overflow from pseudo-element */
+  min-height: 100vh; /* Ensure it takes full height */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Button styles from dictionary app */
+.view-toggle-button, .portfolio-button {
+  background: linear-gradient(145deg, rgba(100, 108, 255, 0.3), rgba(70, 78, 200, 0.3));
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin: 0 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.view-toggle-button:hover, .portfolio-button:hover {
+  background: linear-gradient(145deg, rgba(100, 108, 255, 0.5), rgba(70, 78, 200, 0.5));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.view-toggle-button.active, .portfolio-button.active {
+  background: linear-gradient(145deg, #646cff, #535bf2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Section styling */
+.section-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Default shadow */
+  transition: box-shadow 0.1s ease-out; /* Smooth transition for shadow */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.navbar-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #646cff;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #646cff;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero-headline {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subheadline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border: 3px solid #646cff;
+  box-shadow: 0 0 15px rgba(100, 108, 255, 0.5);
+}
+
+.hero-buttons .portfolio-button {
+  margin: 0 1rem;
+}
+
+.social-links {
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #646cff;
+}
+
+/* About Me Section */
+.about-me-content p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.education-item {
+  margin-bottom: 1rem;
+}
+
+.education-item h4 {
+  margin-bottom: 0.5rem;
+  color: #646cff;
+}
+
+.education-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem; /* Add some padding for scrollbar */
+}
+
+.projects-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 108, 255, 0.5);
+  border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.project-card {
+  flex-shrink: 0;
+  width: calc(100% - 2rem); /* Make each card take full width of the container minus gap */
+  scroll-snap-align: start;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h4 {
+  color: #646cff;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.project-card .technologies {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+}
+
+.project-card .project-links a {
+  color: #646cff;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Publications Section */
+.publications-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem; /* Add some padding for scrollbar */
+}
+
+.publications-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.publications-list::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 108, 255, 0.5);
+  border-radius: 10px;
+}
+
+.publications-list::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.publication-item {
+  flex-shrink: 0;
+  width: calc(100% - 2rem); /* Make each item take full width of the container minus gap */
+  scroll-snap-align: start;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0; /* Remove vertical margin */
+  border-bottom: none; /* Remove vertical border */
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+}
+
+.publication-item h4 {
+  color: #646cff;
+  margin-bottom: 0.5rem;
+}
+
+.publication-item .venue-date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.publication-item p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.publication-item a {
+  color: #646cff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding-bottom: 1rem; /* Add some padding for scrollbar */
+}
+
+.skills-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 108, 255, 0.5);
+  border-radius: 10px;
+}
+
+.skills-grid::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.skill-category {
+  flex-shrink: 0;
+  width: calc(100% - 1.5rem); /* Make each category take full width of the container minus gap */
+  scroll-snap-align: start;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-category h4 {
+  color: #646cff;
+  margin-bottom: 0.75rem;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Contact Section */
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form button {
+  width: auto;
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #646cff, #535bf2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button:hover {
+  background: linear-gradient(145deg, #535bf2, #646cff);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info a {
+  color: #646cff;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto; /* Push footer to the bottom */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.footer .social-links a {
+  font-size: 1.2rem;
+}

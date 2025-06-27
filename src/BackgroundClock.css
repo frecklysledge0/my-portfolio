@@ -1,0 +1,56 @@
+
+.background-clock {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Exo 2', sans-serif;
+  color: rgba(255, 255, 255, 0.25);
+  z-index: -1;
+  pointer-events: none;
+  text-shadow: 0 0 50px rgba(100, 108, 255, 0.2);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.clock-date {
+  font-size: 3vw;
+  margin-bottom: 10px;
+}
+
+.clock-time {
+  font-size: 15vw;
+}
+
+.days-left {
+  font-size: 2vw;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: all; /* Allow interaction for edit button */
+}
+
+.days-left .edit-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.2vw;
+  transition: background 0.3s ease;
+}
+
+.days-left .edit-button:hover {
+  background: rgba(100, 108, 255, 0.3);
+}
+
+.days-left input[type="date"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.2vw;
+  outline: none;
+}
