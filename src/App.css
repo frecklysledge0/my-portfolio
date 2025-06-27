@@ -402,3 +402,90 @@
 .footer .social-links a {
   font-size: 1.2rem;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem 1.5rem;
+    width: 95%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .navbar-logo {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar-links a {
+    margin: 0 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .portfolio-button {
+    margin: 0.5rem 0;
+    width: 80%;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .projects-grid, .publications-list, .skills-grid {
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .project-card, .publication-item, .skill-category {
+    width: calc(100% - 1rem); /* Adjust width for smaller gap */
+  }
+
+  h1, h2, h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-card h4, .publication-item h4, .skill-category h4 {
+    font-size: 1.1rem;
+  }
+
+  .project-card p, .publication-item p, .skill-category li {
+    font-size: 0.85rem;
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .contact-info p, .contact-info a {
+    font-size: 0.85rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
